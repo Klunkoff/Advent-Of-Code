@@ -1,7 +1,7 @@
 import { rawInput } from "./input.js";
 
 const refactoredInput = refactoringInput(rawInput);
-const workingInput = takingStringsOverTwoNums(refactoredInput);
+const workingInput = takingStringsWithNums(refactoredInput);
 
 
 function refactoringInput(input) {
@@ -9,9 +9,9 @@ function refactoringInput(input) {
     return inputArray;
 }
 
-function takingStringsOverTwoNums(refactoredInput) {
-    const minTwoDigitsArray = refactoredInput.filter(string => string.match(/\d/g));
-    return minTwoDigitsArray;
+function takingStringsWithNums(refactoredInput) {
+    const stringsWithDigitsArray = refactoredInput.filter(string => string.match(/\d/g));
+    return stringsWithDigitsArray;
 }
 
 export { workingInput };
