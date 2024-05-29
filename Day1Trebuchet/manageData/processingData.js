@@ -1,9 +1,10 @@
 import { workingInput } from "../manageInput/processingInput.js";
 
-const valuesArray = [];
-findCurrentValue(workingInput);
+const valuesArray = findCurrentValue(workingInput);
 
 function findCurrentValue(workingInput) {
+    
+    const valuesArray = [];
 
     for (let string of workingInput) {
 
@@ -14,6 +15,8 @@ function findCurrentValue(workingInput) {
 
         valuesArray.push(value);
     }
+
+    return valuesArray;
 }
 
 function findFirstDigit(string) {
