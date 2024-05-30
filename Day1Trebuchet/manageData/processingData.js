@@ -20,10 +20,11 @@ function findCurrentValue() {
 function findFirstDigit(string) {
 
     for (let i = 0; i < string.length; i++) {
-        let currentChar = string[i];
-
-        if(parseInt(currentChar)) {
-            return currentChar;
+        
+        const result = checkIsDigit(i, string);
+        
+        if (result) {
+            return result;
         }
     }
 }
@@ -31,11 +32,21 @@ function findFirstDigit(string) {
 function findLastDigit(string) {
 
     for (let i = string.length - 1; i >= 0; i--) {
-        let currentChar = string[i];
-
-        if(parseInt(currentChar)) {
-            return currentChar;
+        
+        const result = checkIsDigit(i, string);
+        
+        if (result) {
+            return result;
         }
+    }
+}
+
+function checkIsDigit(i, string) {
+    
+    let currentChar = string[i];
+
+    if(parseInt(currentChar)) {
+        return currentChar;
     }
 }
 
