@@ -1,6 +1,9 @@
-function findCurrentValue(workingInput) {
+import { getWorkingInput } from "../manageInput/processingInput.js";
+
+function findCurrentValue() {
     
     const valuesArray = [];
+    const workingInput = getWorkingInput();
 
     for (let string of workingInput) {
 
