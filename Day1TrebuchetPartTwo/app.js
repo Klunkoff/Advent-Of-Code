@@ -1,9 +1,12 @@
-import { valuesArray } from "./manageData/processingData.js";
+import { findCurrentValue } from "./manageData/processingData.js";
 
 function app() {
 
-    function findCode(valuesArray) {
+    function findCode() {
+
         let result = 0;
+        const valuesArray = findCurrentValue();
+
         valuesArray.forEach(value => {
             result += value;
         });
@@ -11,7 +14,7 @@ function app() {
         return result;
     }
     
-    const code = findCode(valuesArray);
+    const code = findCode();
     console.log(code);
 }
 

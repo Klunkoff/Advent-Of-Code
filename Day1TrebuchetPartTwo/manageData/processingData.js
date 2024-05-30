@@ -1,13 +1,10 @@
-import { workingInput } from "../manageInput/processingInput.js";
+import { getWorkingInput } from "../manageInput/processingInput.js";
 import { searchingKeywords } from "./processingWords.js";
 
-const valuesArray = [];
-let currentWord = '';
-let isLast = false;
-
-findCurrentValue(workingInput);
-
-function findCurrentValue(workingInput) {
+function findCurrentValue() {
+    
+    const valuesArray = [];
+    const workingInput = getWorkingInput();
 
     for (let string of workingInput) {
 
@@ -18,11 +15,14 @@ function findCurrentValue(workingInput) {
 
         valuesArray.push(value);
     }
+
+    return valuesArray;
 }
 
 function findFirstDigit(string) {
 
-    isLast = false;
+    let currentWord = '';
+    const isLast = false;
 
     for (let i = 0; i < string.length; i++) {
         let currentChar = string[i];
@@ -33,7 +33,7 @@ function findFirstDigit(string) {
             currentWord += currentChar;
         }
 
-        let checkedWord = searchingKeywords(currentWord);
+        let checkedWord = searchingKeywords(currentWord, isLast);
 
         if(checkedWord) {
             currentWord = '';
@@ -43,8 +43,9 @@ function findFirstDigit(string) {
 }
 
 function findLastDigit(string) {
-
-    isLast = true;
+    
+    let currentWord = '';
+    const isLast = true;
 
     for (let i = string.length - 1; i >= 0; i--) {
         let currentChar = string[i];
@@ -55,7 +56,7 @@ function findLastDigit(string) {
             currentWord += currentChar;
         }
 
-        let checkedWord = searchingKeywords(currentWord);
+        let checkedWord = searchingKeywords(currentWord, isLast);
 
         if(checkedWord) {
             currentWord = '';
@@ -64,4 +65,4 @@ function findLastDigit(string) {
     }
 }
 
-export { valuesArray, isLast };
+export { findCurrentValue };

@@ -1,4 +1,3 @@
-import { isLast } from "./processingData.js";
 
 const keywordsObject = {
     one: '1',
@@ -12,7 +11,7 @@ const keywordsObject = {
     nine: '9',
 }
 
-function searchingKeywords(string) {
+function searchingKeywords(string, isLast) {
 
     let reversedString = '';
 
