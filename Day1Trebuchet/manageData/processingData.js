@@ -1,7 +1,3 @@
-import { workingInput } from "../manageInput/processingInput.js";
-
-const valuesArray = findCurrentValue(workingInput);
-
 function findCurrentValue(workingInput) {
     
     const valuesArray = [];
@@ -10,7 +6,6 @@ function findCurrentValue(workingInput) {
 
         let firstDigit = findFirstDigit(string);
         let lastDigit = findLastDigit(string);
-
         let value = Number(firstDigit + lastDigit);
 
         valuesArray.push(value);
@@ -41,4 +36,4 @@ function findLastDigit(string) {
     }
 }
 
-export { valuesArray };
+export { findCurrentValue };
