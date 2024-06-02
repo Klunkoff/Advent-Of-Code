@@ -1,4 +1,4 @@
-const rawInput = `eightfivesssxxmgthreethreeone1sevenhnz
+eightfivesssxxmgthreethreeone1sevenhnz
 hzdlftdtfqfdbxgsix9onetwo13
 29threelgxljfhrjr
 pxvmbjprllmbfpzjxsvhc5
@@ -997,7 +997,4 @@ sixkbsdxjvsncj2four
 42
 ninesevensrzxkzpmgz8kcjxsbdftwoner
 4gbdzqtddmt4eightsixfive
-dljxl7five6nrzfh5one`;
-
-export { rawInput };
-
+dljxl7five6nrzfh5one
