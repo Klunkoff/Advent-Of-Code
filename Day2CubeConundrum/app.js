@@ -1,9 +1,10 @@
-import { gamesArray } from "./manageData/processingGames.js";
+import { processingGame } from "./manageData/processingGames.js";
 
 function app() {
 
-    function getGames(gamesArray) {
+    function getGames() {
         
+        const gamesArray = processingGame();
         let result = 0;
         
         gamesArray.forEach(value => {
@@ -13,7 +14,7 @@ function app() {
         return result;
     }
     
-    const code = getGames(gamesArray);
+    const code = getGames();
     console.log(code);
 }
 

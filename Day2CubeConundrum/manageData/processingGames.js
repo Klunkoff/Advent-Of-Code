@@ -1,10 +1,9 @@
-import { refactoredInputArray } from "../manageInput/processingInput.js";
+import { getInput } from "../manageInput/processingInput.js";
 import { processingGameSets } from "./processingSets.js";
 
-const gamesArray = processingGame(refactoredInputArray);
-
-function processingGame(input) {
+function processingGame() {
     
+    const input = getInput();
     const gamesArray = [];
 
     for (let game of input) {
@@ -23,5 +22,5 @@ function processingGame(input) {
     return gamesArray;
 }
 
-export { gamesArray };
+export { processingGame };
 
