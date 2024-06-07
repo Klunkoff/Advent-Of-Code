@@ -9,14 +9,9 @@ function processingGame() {
     for (let game of input) {
 
         let [currentGame, sets] = game.split(': ');
-        let [name, currentGameNumber] = currentGame.split(' ');
-        currentGameNumber = Number(currentGameNumber);
 
-        let isPossibleGame = processingGameSets(sets);
-        
-        if (isPossibleGame) {
-            gamesArray.push(currentGameNumber);
-        }
+        const gamePowerNumber = processingGameSets(sets);
+        gamesArray.push(gamePowerNumber);
     }
 
     return gamesArray;

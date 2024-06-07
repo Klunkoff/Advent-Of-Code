@@ -1,3 +1,4 @@
+
 function processingGameSets(sets) {
 
     const setsArray = sets.split('; ');
